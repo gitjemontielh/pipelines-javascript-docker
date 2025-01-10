@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gitjemontielhpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitjemontielhpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: gitjemontielhpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: gitjemontielhpipelinesjavascriptdocker 
+          image: myacrpipelinesjs202501092200.azurecr.io/gitjemontielhpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
