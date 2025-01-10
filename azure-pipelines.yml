@@ -5,7 +5,10 @@
 trigger:
 - main
 
-pool: Default
+pool:
+  name: 'Default'
+  demands:
+    - Agent.Name -equals ARTEMIS
 
 resources:
 - repo: self
